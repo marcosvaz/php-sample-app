@@ -33,23 +33,31 @@ COPY ./demo.sql /docker-entrypoint-initdb.d/
 
 3. Iniciar o Docker (preferencialmente o Docker Quickstart Terminal)
 
-4. Fazer o build da imagem do [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend) com:
+4. Esperar a geração do IP no Docker Quickstart Terminal
+
+5. Entrar na pasta 'frontend' da aplicação
+
+* 5.1 Fazer o build da imagem do [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend) com:
 ```sh
 docker build . -t frontend:0.0.1
 ```
 
-5. Fazer o build da imagem do [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend) com:
+6. Entrar na pasta 'backend' da aplicação
+
+* 6.1 Fazer o build da imagem do [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend) com:
 ```sh
 docker build . -t db:0.0.1
 docker run -d -e MYSQL_DATABASE='demo'  -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' --name backend db:0.0.1
 ```
 
-* 5.1: Caso queira testar o banco:
+* 6.2: Caso queira testar o banco:
 ```sh
 docker exec -ti backend mysql -u root -p
 ```
 
-6. Para rodar as imagens do frontend e do backend juntas:
+7. Entrar na pasta 'frontend'
+
+* 7.1: Para rodar as imagens do frontend e do backend juntas:
 ```sh
 docker run -d -p 80:80 --name php-sample-app --link backend frontend:0.0.1
 ```
