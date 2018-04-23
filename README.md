@@ -6,5 +6,4 @@
 
 ***Para executar a aplicação:***
 
-1. Fazer o build da imagem do frontend
-[frontend/](https://github.com/marcosvaz/php-sample-app/frontend);
+1. Fazer o build da imagem do [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend);
