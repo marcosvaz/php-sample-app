@@ -37,35 +37,42 @@ COPY ./demo.sql /docker-entrypoint-initdb.d/
 
 2. Clonar ***o seu*** repositório em sua máquina
 
-3. Iniciar o Docker (preferencialmente o Docker Quickstart Terminal)
+3. Iniciar o Docker Quickstart Terminal
+> Caso não o tenha, [baixe aqui](https://download.docker.com/win/stable/DockerToolbox.exe)
+> Caso seu usuário não tenha permissão de Administrador, clique com o botão direito no Docker Quickstart Terminal, em 'Executar como Administrador', e entre com sua senha da conta de Administrador
 
-4. Esperar a geração do IP no Docker Quickstart Terminal
+* 3.1: Espere a aparição do logo do Docker em código e a geração do IP no Docker Quickstart Terminal
 
-5. Entrar na pasta 'frontend' da aplicação
+4. Entrar na pasta 'frontend' da aplicação
+> Abra o terminal na pasta ou navegue até ela pelo prompt de comando, usando 'cd' e o caminho da pasta, como por exemplo: 'cd C:/Users/SEU_USUARIO/CAMINHO_DA_PASTA/php-sample-app/frontend'
 
-* 5.1 Fazer o build da imagem do [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend) com:
+* 4.1 Fazer o build da imagem do [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend) com:
 ```sh
 docker build . -t frontend:0.0.1
 ```
 
-6. Entrar na pasta 'backend' da aplicação
+5. Entrar na pasta 'backend' da aplicação
+> Abra o terminal na pasta ou navegue até ela pelo prompt de comando usando 'cd ../backend'
 
-* 6.1 Fazer o build da imagem do [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend) com:
+* 5.1: Fazer o build da imagem do [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend) com:
 ```sh
 docker build . -t db:0.0.1
 docker run -d -e MYSQL_DATABASE='demo'  -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' --name backend db:0.0.1
 ```
+* 5.2: Espere 30 segundos para a criação do banco
 
-* 6.2: Caso queira testar o banco:
+* 5.2: Caso queira testar o banco:
 ```sh
 docker exec -ti backend mysql -u root -p
 ```
 
-7. Entrar na pasta 'frontend'
+6. Voltar para a pasta 'frontend'
 
-* 7.1: Para rodar as imagens do frontend e do backend juntas:
+* 6.1: Para rodar as imagens do frontend junto do backend:
 ```sh
 docker run -d -p 80:80 --name php-sample-app --link backend frontend:0.0.1
 ```
+> Abra o terminal na pasta ou navegue até ela pelo prompt de comando, usando 'cd ../frontend'
 
-8. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal pelo navegador (normalmente o IP é '192.168.99.100')
+7. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal pelo navegado
+> Caso tenha fechado, normalmente o IP gerado é '192.168.99.100'
