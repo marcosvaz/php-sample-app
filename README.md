@@ -67,3 +67,5 @@ docker exec -ti backend mysql -u root -p
 ```sh
 docker run -d -p 80:80 --name php-sample-app --link backend frontend:0.0.1
 ```
+
+8. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal pelo navegador (normalmente o IP é '192.168.99.100')
