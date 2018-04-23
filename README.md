@@ -4,6 +4,8 @@
 
 ---
 
+## Documentação dos Dockerfiles
+
 ***Dockerfile*** no [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend):
 ```sh
 # Recupera a imagem do php na versão 7.2 com Apache
@@ -25,7 +27,11 @@ FROM  mysql:latest
 COPY ./demo.sql /docker-entrypoint-initdb.d/
 ```
 
-***Para executar a aplicação:***
+---
+
+## Execução da aplicação:
+
+***Passo a passo para a execução:***
 
 1. Fazer fork do repositório 'https://github.com/marcosvaz/php-sample-app'
 
