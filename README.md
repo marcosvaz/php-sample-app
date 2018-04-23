@@ -4,15 +4,7 @@
 
 ---
 
-***Importante:***
+***Para executar a aplicação:***
 
-Instruções sobre modelo de execução e entregáveis podem ser obtidas no [diretório de documentação](https://github.com/fiapsecdevops/php-sample-app/tree/master/docs) ou no portal do aluno;
-
-Duvidas podem ser enviadas para <profhelder.pereira@fiap.com.br>
-
-Esta app foi adaptada do exemplo contido [neste artigo](https://www.tutorialrepublic.com/php-tutorial/php-mysql-crud-application.php)
-
-A estrutura foi criada com base nas seguintes tags:
-
-- frontend-0.1: Versão de testes SEM conexão com o banco para a primeira parte da NAC;
-- stable:  Versão COM as linhas de conexão com o banco configuradas, será necessário que o MySQL esteja operante para testes faltando apenas a criação do Dockerfile da aplicação/mysql;
+1. Fazer o build da imagem do frontend
+[frontend/](https://github.com/marcosvaz/php-sample-app/frontend);
