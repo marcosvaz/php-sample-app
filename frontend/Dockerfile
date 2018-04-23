@@ -1,7 +1,7 @@
 # PHP image
 FROM php:7.2-apache
 
-# isntall MYSQLI extension
+# install MYSQLI extension
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
 # root directory
