@@ -1,6 +1,4 @@
-# Sistemas para Internet - SecDevOps
-
-***nac:*** Criação de uma aplicação no formato "CRUD" executada em containers com base na linguagem "PHP" e no banco de dados "MySQL";
+# Aplicação em formato "CRUD" executada em containers com base na linguagem "PHP" e no banco de dados "MySQL";
 
 ---
 
