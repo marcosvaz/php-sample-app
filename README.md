@@ -76,3 +76,17 @@ docker run -d -p 80:80 --rm --name php-sample-app --link backend frontend:0.0.1
 
 #### 7. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal através de um navegador
 > Caso tenha fechado, normalmente o IP gerado é '192.168.99.100'
+
+---
+
+## Extras
++ Caso queira matar os containers, execute:
+```sh
+docker kill php-sample-app backend
+```
+
++ Caso queira apagar as imagens, execute:
+```sh
+docker rmi frontend:0.0.1 db:0.0.1
+```
+> Para apagar todas, você pode utilizar o comando 'docker rmi $(docker images -q -a)'
