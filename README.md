@@ -65,6 +65,8 @@ docker run -d -e MYSQL_DATABASE='demo' -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' --rm 
 docker exec -ti backend mysql -u root -p
 ```
 > Irá aparecer um campo para digitar a senha ('Enter password:'), deixe vazio, apenas dê 'enter'
+>
+> Para sair digite o comando 'exit'
 
 #### 6. Voltar para a pasta 'frontend'
 > Abra o terminal na pasta ou navegue até ela pelo prompt de comando, usando 'cd ../frontend'
