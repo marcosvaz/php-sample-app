@@ -1,0 +1,1 @@
+CMD ["docker-compose", "up"]
