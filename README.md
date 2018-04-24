@@ -56,7 +56,7 @@ docker build . -t frontend:0.0.1
 * 5.1: Fazer o build da imagem do [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend) com:
 ```sh
 docker build . -t db:0.0.1
-docker run -d -e MYSQL_DATABASE='demo' -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' --name backend db:0.0.1
+docker run -d -e MYSQL_DATABASE='demo' -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' --rm --name backend db:0.0.1
 ```
 * 5.2: Espere em média uns 30 segundos para a criação do banco
 
@@ -71,7 +71,7 @@ docker exec -ti backend mysql -u root -p
 
 * 6.1: Para rodar as imagens do frontend junto do backend, execute:
 ```sh
-docker run -d -p 80:80 --name php-sample-app --link backend frontend:0.0.1
+docker run -d -p 80:80 --rm --name php-sample-app --link backend frontend:0.0.1
 ```
 
 #### 7. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal através de um navegador
