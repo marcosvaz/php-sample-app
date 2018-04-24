@@ -5,9 +5,14 @@ services:
     build: ./frontend
     ports:
       - "80:80"
+      - "443:443"
     environment:
       - MYSQL_SERVER=backend
       - MYSQL_USER=root
+      - MYSQL_PASS=123456
+      - MYSQL_DATABASE=demo
+      # Para usar usuários criados no banco, no PHP, troque o 'root' do 'MYSQL_USER' com o seu usuário
+      # E o '123456' do 'MYSQL_PASS' com a sua senha
     links:
       - backend
 
@@ -17,5 +22,11 @@ services:
     ports:
       - "3306:3306"
     environment:
+      - MYSQL_ROOT_PASSWORD=123456
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-      - MYSQL_ROOT_PASS=
+      - MYSQL_DATABASE=demo
+      # Caso deseje adicionar um usuário no banco,
+      # descomente as seguintes linhas, e mude o 'seu_usuário' e a 'sua_senha'
+      # para o usuário e senha desejados
+      # - MYSQL_USER=seu_usuario
+      # - MYSQL_PASSWORD=sua_senha
