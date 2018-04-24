@@ -52,7 +52,7 @@ docker-compose up
 ```
 
 #### 5. Aguarde o build estar totalmente completo, deve levar em média uns 2 minutos, e acesse a aplicação, usando o IP gerado no Docker Quickstart Terminal, através do navegador
-> Caso tenha fechado, normalmente o IP gerado é '192.168.99.100'
+> Caso tenha fechado, geralmente o IP gerado é '192.168.99.100'
 
 ---
 
@@ -158,7 +158,7 @@ docker run -d -p 80:80 --rm --name php-sample-app --link backend frontend:0.0.1
 ```
 
 #### 7. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal através de um navegador
-> Caso tenha fechado, normalmente o IP gerado é '192.168.99.100'
+> Caso tenha fechado, geralmente o IP gerado é '192.168.99.100'
 
 ---
 
