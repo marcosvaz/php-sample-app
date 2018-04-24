@@ -193,5 +193,6 @@ docker rmi frontend:0.0.1 db:0.0.1
 
 ---
 
-## O container do backend com o banco, é Statefull, comportando dados
-## Enquanto o do frontend é Stateless, podendo ser matado a qualquer hora
+> O container do backend com o banco, é Statefull, comportando dados
+>
+> Enquanto o do frontend é Stateless, podendo ser matado a qualquer hora
