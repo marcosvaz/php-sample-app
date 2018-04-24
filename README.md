@@ -89,6 +89,7 @@ enviroment:
 > Caso você queira adicionar um usuário novo, defina as variáveis 'MYSQL_USER' e 'MYSQL_PASSWORD' no enviroment do backend, como no exemplo abaixo:
 ```yml
 enviroment:
+  [...]
   - MYSQL_USER=seu_usuario
   - MYSQL_PASSWORD=sua_senha
 ```
