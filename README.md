@@ -30,7 +30,7 @@ COPY . $WORKDIR
 > A build da imagem do frontend está automatizada através de tags  
 > cada tag de versão como 'v1.0.0', faz uma nova build da imagem
 >
-> Link do repositório da imagem no Docker Hub: [marcosvazoliveira/php-sample-app](https://hub.docker.com/r/marcosvazoliveira/php-sample-app/):
+> Link do repositório da imagem no Docker Hub: [marcosvazoliveira/php-sample-app](https://hub.docker.com/r/marcosvazoliveira/php-sample-app/)
 
 ***Dockerfile*** no [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend):
 ```sh
