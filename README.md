@@ -51,7 +51,7 @@ COPY ./demo.sql /docker-entrypoint-initdb.d/
 docker-compose up
 ```
 
-#### 5. Aguarde o build estar totalmente completo, deve levar em média um minuto, e acesse a aplicação, usando o IP gerado no Docker Quickstart Terminal, através do navegador
+#### 5. Aguarde o build estar totalmente completo, deve levar em média uns 2 minutos, e acesse a aplicação, usando o IP gerado no Docker Quickstart Terminal, através do navegador
 > Caso tenha fechado, normalmente o IP gerado é '192.168.99.100'
 
 ---
