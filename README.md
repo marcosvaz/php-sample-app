@@ -9,11 +9,14 @@
 # Recupera a imagem do php na versão 7.2 com Apache
 FROM php:7.2-apache
 
-# Instala o módulo do MySQLi
+# Instala o módulo do MySQLi para rodar o banco
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
-# Copia os arquivos da pasta raiz do usuário (no caso 'frontend') para a pasta raiz do servidor
-COPY . .
+# Define a váriavel WORKDIR com o caminho para a raiz do servidor 'var/www/html'
+WORKDIR /var/www/html/
+
+# Copia os arquivos da pasta raiz do usuário (no caso 'frontend') para a pasta raiz do servidor ('var/www/html')
+COPY . $WORKDIR
 ```
 
 ***Dockerfile*** no [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend):
