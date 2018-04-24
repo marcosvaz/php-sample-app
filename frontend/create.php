@@ -1,11 +1,11 @@
 <?php
 // Include config file
 require_once 'config.php';
- 
+
 // Define variables and initialize with empty values
 $name = $description = $registration = "";
 $name_err = $description_err = $registration_err = "";
- 
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate name
@@ -17,39 +17,39 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $name = $input_name;
     }
-    
+
     // Validate description
     $input_description = trim($_POST["description"]);
     if(empty($input_description)){
-        $description_err = 'Please enter an description.';     
+        $description_err = 'Please enter an description.';
     } else{
         $description = $input_description;
     }
-    
+
     // Validate registration
     $input_registration = trim($_POST["registration"]);
     if(empty($input_registration)){
-        $registration_err = "Please enter the registration amount.";     
+        $registration_err = "Please enter the registration amount.";
     } elseif(!ctype_digit($input_registration)){
         $registration_err = 'Please enter a positive integer value.';
     } else{
         $registration = $input_registration;
     }
-    
+
     // Check input errors before inserting in database
     if(empty($name_err) && empty($description_err) && empty($registration_err)){
         // Prepare an insert statement
         $sql = "INSERT INTO students (name, description, registration) VALUES (?, ?, ?)";
-         
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_description, $param_registration);
-            
+
             // Set parameters
             $param_name = $name;
             $param_description = $description;
             $param_registration = $registration;
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
@@ -59,16 +59,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Something went wrong. Please try again later.";
             }
         }
-         
+
         // Close statement
         mysqli_stmt_close($stmt);
     }
-    
+
     // Close connection
     mysqli_close($link);
 }
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,7 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <a href="index.php" class="btn btn-default">Cancel</a>
                     </form>
                 </div>
-            </div>        
+            </div>
         </div>
     </div>
 </body>
