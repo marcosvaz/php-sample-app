@@ -58,7 +58,7 @@ docker build . -t frontend:0.0.1
 docker build . -t db:0.0.1
 docker run -d -e MYSQL_DATABASE='demo' -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' --rm --name backend db:0.0.1
 ```
-* 5.2: Espere em média uns 30 segundos para a criação do banco
+* 5.2: Espere em média um minuto para que o banco seja criado
 
 * 5.3: Caso queira testar o banco, execute:
 ```sh
