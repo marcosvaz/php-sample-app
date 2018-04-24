@@ -20,8 +20,8 @@ COPY . .
 
 ***Dockerfile*** no [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend):
 ```sh
-# Recupera a imagem do MySQL
-FROM  mysql:latest
+# Recupera a imagem do MySQL na versão 5.7
+FROM  mysql:5.7
 
 # Copia o arquivo 'demo.sql' para a pasta '/docker-entrypoint-initdb.d/', para poder rodar o banco
 COPY ./demo.sql /docker-entrypoint-initdb.d/
