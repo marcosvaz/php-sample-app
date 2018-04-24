@@ -80,7 +80,7 @@ ports:
 + Variáveis de ambiente, para alterar, edite as linhas que contiverem:
 ```yml
 enviroment:
-  - 'variável'=valor
+  - variável=valor
 ```
 > No frontend existem as variáveis 'MYSQL_SERVER', 'MYSQL_USER', 'MYSQL_PASS' e 'MYSQL_DATABASE'
 >
