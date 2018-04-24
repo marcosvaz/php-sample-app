@@ -91,4 +91,8 @@ docker kill php-sample-app backend
 ```sh
 docker rmi frontend:0.0.1 db:0.0.1
 ```
+> O comando acima irá apagar apenas as imagens criadas do projeto, mantendo as imagens do php:7.2-apache e do mysql:5.7
+>
 > Para apagar todas, você pode utilizar o comando 'docker rmi $(docker images -q -a)'
+>
+> ***Mas atenção:*** isso irá apagar todas as imagens que você tiver no computador, execute o comando 'docker images' e tenha certeza de que deseja apagar todas antes de executar o comando
