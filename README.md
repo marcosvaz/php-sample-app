@@ -37,8 +37,7 @@ COPY ./demo.sql /docker-entrypoint-initdb.d/
 
 2. Clonar ***o seu*** repositório em sua máquina
 
-3. Iniciar o Docker Quickstart Terminal
-> Caso não o tenha, baixe o Docker Toolbox [aqui](https://download.docker.com/win/stable/DockerToolbox.exe)  
+3. Iniciar o Docker Quickstart Terminal, caso não o tenha, baixe o Docker Toolbox [aqui](https://download.docker.com/win/stable/DockerToolbox.exe)
 > Caso seu usuário não tenha permissão de Administrador, clique com o botão direito no Docker Quickstart Terminal, em 'Executar como Administrador', e entre com sua senha da conta de Administrador
 
 * 3.1: Espere a aparição do logo do Docker em código e a geração do IP no Docker Quickstart Terminal
