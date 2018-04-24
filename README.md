@@ -61,18 +61,19 @@ docker run -d -e MYSQL_DATABASE='demo'  -e MYSQL_ALLOW_EMPTY_PASSWORD='yes' --na
 ```
 * 5.2: Espere 30 segundos para a criação do banco
 
-* 5.2: Caso queira testar o banco:
+* 5.3: Caso queira testar o banco, execute:
 ```sh
 docker exec -ti backend mysql -u root -p
 ```
+> Irá aparecer um campo para digitar a senha, apenas dê 'enter'
 
 6. Voltar para a pasta 'frontend'
+> Abra o terminal na pasta ou navegue até ela pelo prompt de comando, usando 'cd ../frontend'
 
 * 6.1: Para rodar as imagens do frontend junto do backend:
 ```sh
 docker run -d -p 80:80 --name php-sample-app --link backend frontend:0.0.1
 ```
-> Abra o terminal na pasta ou navegue até ela pelo prompt de comando, usando 'cd ../frontend'
 
-7. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal pelo navegado
+7. Para ver o container rodando, acesse o IP gerado no Docker Quickstart Terminal pelo navegador
 > Caso tenha fechado, normalmente o IP gerado é '192.168.99.100'
