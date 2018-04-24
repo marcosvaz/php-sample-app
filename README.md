@@ -4,6 +4,15 @@
 
 ## Documentação dos Dockerfiles
 
+***Dockerfile*** na [raiz](https://github.com/marcosvaz/php-sample-app/tree/master/):
+```sh
+# Recupera a imagem do PHP na versão 7.2 com apache
+FROM  php:7.2-apache
+
+# Realiza o comando 'docker-compose up' no prompt para buildar as imagens
+CMD ["docker-compose", "up"]
+```
+
 ***Dockerfile*** no [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend):
 ```sh
 # Recupera a imagem do php na versão 7.2 com Apache
