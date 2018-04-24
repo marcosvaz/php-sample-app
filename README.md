@@ -186,3 +186,8 @@ docker rmi frontend:0.0.1 db:0.0.1
 > Para apagar todas, você pode utilizar o comando 'docker rmi $(docker images -q -a)'
 >
 > ***Mas atenção:*** isso irá apagar todas as imagens que você tiver no computador, execute o comando 'docker images' e tenha certeza de que deseja apagar todas antes de executar o comando
+
+---
+
+## O container do backend com o banco, é Statefull, comportando dados
+## Enquanto o do frontend é Stateless, podendo ser matado a qualquer hora
