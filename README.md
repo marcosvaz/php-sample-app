@@ -65,12 +65,12 @@ docker exec -ti backend mysql -u root -p
 > Irá aparecer um campo para digitar a senha ('Enter password:'), deixe vazio, apenas dê 'enter'
 >
 > Você pode visualizar os bancos criados com o comando:
-```sh
+```sql
 show databases;
 ```
 >
 > Para ver se a tabela 'students' foi criada, execute:
-```sh
+```sql
 use demo;  
 show tables;
 ```
