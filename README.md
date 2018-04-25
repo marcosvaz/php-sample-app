@@ -4,7 +4,7 @@
 
 ## Documentação dos Dockerfiles
 
-***Dockerfile*** no [frontend/](https://github.com/marcosvaz/php-sample-app/tree/master/frontend):
+***Dockerfile*** no [frontend](https://github.com/marcosvaz/php-sample-app/tree/master/frontend):
 ```sh
 # Recupera a imagem do php na versão 7.2 com Apache
 FROM php:7.2-apache
@@ -23,7 +23,7 @@ COPY . $WORKDIR
 >
 > Link do repositório da imagem no Docker Hub: [marcosvazoliveira/php-sample-app](https://hub.docker.com/r/marcosvazoliveira/php-sample-app/)
 
-***Dockerfile*** no [backend/](https://github.com/marcosvaz/php-sample-app/tree/master/backend):
+***Dockerfile*** no [backend](https://github.com/marcosvaz/php-sample-app/tree/master/backend):
 ```sh
 # Recupera a imagem do MySQL na versão 5.7
 FROM  mysql:5.7
